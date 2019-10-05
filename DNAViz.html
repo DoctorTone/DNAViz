@@ -2,16 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
     <title>DNAViz</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel='stylesheet' href="css/DNAStyles.css">
 
-    <script type="text/javascript" src="./js/DNAViz.min.js"></script>
+    <!-- <script type="text/javascript" src="./js/DNAViz.min.js"></script> -->
+    <script type="text/javascript" src="js/ngl.dev.js?v=0.7"></script>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/controlKit.min.js?v=0.2"></script>
+    <script type="text/javascript" src="js/moleculeConfig.js?v=0.2"></script>
+    <script type="text/javascript" src="js/representationgroup.js"></script>
+    <script type="text/javascript" src="js/detector.js"></script>
+    <script type="text/javascript" src="js/pdiview.js?v=0.5"></script>
 </head>
 <body>
+    <div>
+        <span id="debugOutput"></span>
+    </div>
+
     <div id="guiWidth" class="d-none">
         <p>dummy</p>
     </div>
@@ -35,23 +47,6 @@
     </div>
 
     <div id="viewport">
-        <div id="graphs" class="infoPanel d-none">
-            <div class="text-center separate">
-                <div>
-                    <img class="img-fluid" src="images/riseL.png">
-                </div>
-                <div>
-                    <img class="img-fluid" src="images/rise.png">
-                </div>
-                <div>
-                    <img class="img-fluid" src="images/buckle.png">
-                </div>
-            </div>
-            <div id="toggleContainer" class="infoPanel">
-                <button id="hideDetails" type="button" class="btn btn-primary">Hide</button>
-            </div>
-        </div>
-
         <div id="zoomControls" class="infoPanel text-center">
             <p>Zoom</p>
             <div>
@@ -64,13 +59,6 @@
             <div>
                 <button id="rotateLeft" type="button" class="btn btn-primary"><img class="img-fluid" src="images/leftWhite.png"></button>
                 <button id="rotateRight" type="button" class="btn btn-primary"><img class="img-fluid" src="images/rightWhite.png"></button>
-            </div>
-        </div>
-
-        <div id="sequenceInfo" class="infoPanel text-center d-none">
-            <img class="img-fluid" src="images/logoClearWhite.png">
-            <div id="toggleSequence" class="infoPanel">
-                <button id="hideSequence" type="button" class="btn btn-primary">Hide</button>
             </div>
         </div>
 

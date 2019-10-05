@@ -50491,6 +50491,10 @@ function Viewer (idOrElement) {
     height = box.height || 1;
   }
 
+  // CHANGE - TG
+  width = window.innerWidth;
+  height = window.innerHeight;
+
   var rendering, renderPending, lastRenderedPicking, isStill;
   var sampleLevel, cDist, bRadius;
 
