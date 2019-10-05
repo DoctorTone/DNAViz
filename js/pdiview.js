@@ -256,7 +256,7 @@ class DNAViz {
             let guiWidth = $('#guiWidth').css("width");
             guiWidth = parseInt(guiWidth, 10);
             //DEBUG
-            console.log("Gui width = ", guiWidth);
+            // console.log("Gui width = ", guiWidth);
             if(!guiWidth) {
                 guiWidth = 10;
             }
