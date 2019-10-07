@@ -51893,7 +51893,8 @@ MouseObserver.prototype._onTouchstart = function _onTouchstart (event) {
   if (event.target !== this.domElement) {
     return
   }
-  event.preventDefault();
+  // CHANGE - TG
+  // event.preventDefault();
   this.pressed = true;
   switch (event.touches.length) {
     case 1: {
@@ -51927,14 +51928,16 @@ MouseObserver.prototype._onTouchstart = function _onTouchstart (event) {
 
 MouseObserver.prototype._onTouchend = function _onTouchend (event) {
   if (event.target === this.domElement) {
-    event.preventDefault();
+	  // CHANGE - TG
+    //event.preventDefault();
   }
   this.pressed = false;
 };
 
 MouseObserver.prototype._onTouchmove = function _onTouchmove (event) {
   if (event.target === this.domElement) {
-    event.preventDefault();
+	  // CHANGE - TG
+    // event.preventDefault();
     this.overElement = true;
   } else {
     this.overElement = false;
