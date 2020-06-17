@@ -243,7 +243,7 @@ class DNAViz {
 
     createGUI() {
         //Create GUI - controlKit
-        window.addEventListener('load', () => {
+        
 
             let visibilityConfig = {
                 NAcid: true,
@@ -352,7 +352,7 @@ class DNAViz {
                         }
                         this.savePreferences(saveConfig);
                     });
-        });
+
     }
 
     onBackgroundColourChanged(colour) {
@@ -537,7 +537,7 @@ $(document).ready(function(e){
         app.zoomOut(false);
     });
 
-    let elemList = ["rotateControls", "zoomControls"];
+    let elemList = ["rotateControls", "zoomControls", "controlKit"];
     app.stopNotifications(elemList);
 });
 

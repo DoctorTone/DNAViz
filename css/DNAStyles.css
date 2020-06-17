@@ -3,6 +3,8 @@
 body {
     margin: 0;
     overflow: hidden;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 .infoPanel {
     position: absolute;
@@ -133,7 +135,7 @@ body {
     }
     #rotateControls,
     #zoomControls {
-        width: 17.5%;
+        width: 15%;
     }
     #zoomControls {
         bottom: 37.5%;
@@ -156,10 +158,19 @@ body {
     }
 }
 
+@media (min-width: 768px) and (orientation: landscape) {
+    #zoomControls {
+        bottom: 27%;
+    }
+}
+
 @media (min-width: 992px) {
     #rotateControls,
     #zoomControls {
         width: 12.5%;
+    }
+    #zoomControls {
+        bottom: 17%;
     }
     #rotateControls {
         bottom: 3.5%;
