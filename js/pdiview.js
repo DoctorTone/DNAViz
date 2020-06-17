@@ -529,11 +529,11 @@ $(document).ready(function(e){
         app.zoomIn(false);
     });
 
-    $('#zoomOut').on("mousedown", () => {
+    $('#zoomOut').on("touchstart", () => {
         app.zoomOut(true);
     });
 
-    $('#zoomOut').on("mouseup", () => {
+    $('#zoomOut').on("touchend", () => {
         app.zoomOut(false);
     });
 
